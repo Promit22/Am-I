@@ -1,0 +1,108 @@
+html body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+:root {
+  --main-color: #edede9;
+  --menu-color: #d6ccc2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  max-height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  background-color: var(--menu-color);
+  padding: 0.5em;
+}
+
+header > p {
+  margin-right: auto;
+  padding: 0.2em;
+  background-color: #ff6700;
+  border-radius: 0.5em;
+  color: white;
+}
+
+#menu {
+  display: flex;
+  align-items: center;
+  /* margin-right: auto; */
+}
+
+#input {
+  display: none;
+}
+
+#search {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  margin: 10px;
+  position: relative;
+  margin-right: 2em;
+  margin-top: 0;
+}
+
+#search::after {
+  content: "";
+  width: 2px;
+  height: 12px;
+  position: absolute;
+  top: 85%;
+  left: 100%;
+  transform: rotate(-40deg);
+  background-color: #000;
+}
+
+#menubar {
+  width: 25px;
+  height: 2px;
+  background: black;
+  position: relative;
+  transition: all 0.2s linear;
+}
+
+#menubar::before,
+#menubar::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: black;
+  transition: all 0.2s linear;
+}
+
+#menubar::before {
+  top: -7px;
+}
+
+#menubar::after {
+  top: 7px;
+}
+
+#input:checked + label #menubar {
+    background: transparent;
+}
+
+#input:checked + label #menubar::after {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+#input:checked + label #menubar::before {
+    top: 0;
+    transform: rotate(-45deg);
+}
