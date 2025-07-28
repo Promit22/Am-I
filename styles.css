@@ -11,6 +11,7 @@ html body {
 :root {
   --main-color: #edede9;
   --menu-color: #d6ccc2;
+  --nav-color: #f5ebe0;
 }
 
 * {
@@ -25,6 +26,7 @@ header {
   /* justify-content: space-around; */
   background-color: var(--menu-color);
   padding: 0.5em;
+  position: fixed;
 }
 
 header > p {
@@ -39,6 +41,7 @@ header > p {
   display: flex;
   align-items: center;
   /* margin-right: auto; */
+  /* justify-content: center; */
 }
 
 #input {
@@ -46,22 +49,22 @@ header > p {
 }
 
 #search {
-  width: 15px;
-  height: 15px;
+  width: 13px;
+  height: 13px;
   border: 2px solid #000;
-  border-radius: 50%;
+  border-radius: 30%;
   margin: 10px;
   position: relative;
   margin-right: 2em;
-  margin-top: 0;
+  /* margin-top: 0; */
 }
 
 #search::after {
   content: "";
   width: 2px;
-  height: 12px;
+  height: 5px;
   position: absolute;
-  top: 85%;
+  top: 100%;
   left: 100%;
   transform: rotate(-40deg);
   background-color: #000;
@@ -73,6 +76,7 @@ header > p {
   background: black;
   position: relative;
   transition: all 0.2s linear;
+  /* z-index: 10; */
 }
 
 #menubar::before,
@@ -94,15 +98,132 @@ header > p {
 }
 
 #input:checked + label #menubar {
-    background: transparent;
+  background: transparent;
 }
 
 #input:checked + label #menubar::after {
-    top: 0;
-    transform: rotate(45deg);
+  top: 0;
+  transform: rotate(45deg);
 }
 
 #input:checked + label #menubar::before {
-    top: 0;
-    transform: rotate(-45deg);
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+#navContainer {
+  position: fixed;
+  top: 3.4em;
+  width: 100%;
+  z-index: 7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* left: -2em; */
+  background-color: var(--nav-color);
+  transform: translateX(100%);
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+
+#navContainer.move {
+  /* background-color: red; */
+  transform: translateX(0%);
+}
+
+#login {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5em;
+  margin-left: -4em;
+  /* justify-content: space-around; */
+}
+
+#login > a {
+  font-size: 0.9em;
+  margin-left: 1em;
+  /* margin-top: 2em; */
+  /* font-weight: 00; */
+  text-decoration: none;
+  color: initial;
+}
+
+#avatar {
+  width: 30px;
+  height: 30px;
+  background-color: #c0c0c0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2em;
+}
+
+#icon {
+  width: 50%;
+  height: 50%;
+  border: 1px solid black;
+  border-bottom: 1px solid #c0c0c0;
+  border-radius: 50px;
+  position: relative;
+}
+
+#icon::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border: 1px solid black;
+  border-radius: 50px;
+  left: 3px;
+  top: -8px;
+  position: absolute;
+}
+
+.aero {
+  width: 7px;
+  height: 1px;
+  background-color: #000;
+  margin-left: 8em;
+  transform: rotate(45deg);
+  position: relative;
+}
+
+.aero::after {
+  content: "";
+  width: 7px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transform: rotate(90deg);
+}
+
+#deviceList {
+  list-style-type: none;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  /* margin: 0; */
+  padding: 0;
+  margin-left: -14em;
+  /* display: block; */
+  position: relative;
+}
+
+#deviceList li {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  margin: 20px;
+}
+
+#deviceList > li > span {
+  display: block;
+  position: absolute;
+  left: 9.8em;
+  /* margin-right: -2em; */
+  /* margin-left: ; */
+  /* text-align: center; */
 }
