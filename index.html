@@ -1,68 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <header>
-      <p>Am I ?</p>
-      <div id="menu">
-        <div id="search"></div>
-        <input type="checkbox" name="" id="input" />
-        <label for="input">
-          <div id="menubar"></div>
-        </label>
-      </div>
-    </header>
-    <div id="navContainer" class="test">
-      <div id="login">
-        <div id="avatar">
-          <div id="icon"></div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./styles.css" />
+    </head>
+    <body>
+        <header>
+            <p>Am I ?</p>
+            <div id="menu">
+                <div id="search"></div>
+                <input type="checkbox" name="" id="input" />
+                <label for="input">
+                    <div id="menubar"></div>
+                </label>
+            </div>
+        </header>
+        <div id="navContainer" class="test">
+            <div id="login">
+                <div id="avatar">
+                    <div id="icon"></div>
+                </div>
+                <a href="#">Login / Sign Up</a>
+                <span class="aero"></span>
+            </div>
+            <ul id="deviceList">
+                <li>Mobile <span class="aero"></span></li>
+                <li>Wearables <span class="aero"></span></li>
+                <li>Smart Home <span class="aero"></span></li>
+                <li>Lifestyle <span class="aero"></span></li>
+                <li>Poco <span class="aero"></span></li>
+                <li>Discover</li>
+                <li>Support</li>
+                <li>Community</li>
+                <li id="more">
+                    <ul>
+                        <li>SUPPORT <span class="plus">+</span></li>
+                        <li>ABOUT US <span class="plus">+</span></li>
+                        <li>AM I PROJECTS <span class="plus">+</span></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-        <a href="#">Login / Sign Up</a>
-        <span class="aero"></span>
-      </div>
-      <ul id="deviceList">
-        <li>Mobile <span class="aero"></span></li>
-        <li>Wearables <span class="aero"></span></li>
-        <li>Smart Home <span class="aero"></span></li>
-        <li>Lifestyle <span class="aero"></span></li>
-        <li>Poco <span class="aero"></span></li>
-        <li>Discover</li>
-        <li>Support</li>
-        <li>Community</li>
-        <li id="more">
-          <ul>
-            <li>SUPPORT <span class="plus">+</span></li>
-            <li>ABOUT US <span class="plus">+</span></li>
-            <li>AM I PROJECTS <span class="plus">+</span></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <main id="main">
-      <div class="heroSection">
-        <div class="heroInfo m15">
-          <p>Shaomi Hyper AI</p>
-          <p>Shaomi 15 series</p>
-          <p>co engineered with someone you know</p>
-          <p>Pinapple photography</p>
-          <p>redefining something you never heard of</p>
-          <button>Learn more</button>
-          <img src="./assets/hero.avif" alt="" />
-        </div>
-        <div class="heroInfo f7">
-          <p>POCO LOCO</p>
-          <p>Buy it or not we will still make them</p>
-          <button>Learn more</button>
-          <img src="./assets/f7.png" alt="" />
-        </div>
-      </div>
-      <!-- </div> -->
-    </main>
-    <script src="./main.js"></script>
-  </body>
+        <main id="main">
+            <div class="heroSection">
+                <div class="heroInfo m15">
+                    <p>Shaomi Hyper AI</p>
+                    <p>Shaomi 15 series</p>
+                    <p>co engineered with someone you know</p>
+                    <p>Pinapple photography</p>
+                    <p>redefining something you never heard of</p>
+                    <button>Learn more</button>
+                    <img src="./assets/hero.avif" alt="" />
+                </div>
+                <div class="heroInfo f7">
+                    <p>Pogo</p>
+                    <p>Buy it or not we will still make them</p>
+                    <button>Learn more</button>
+                    <img src="./assets/f7.png" alt="" />
+                </div>
+            </div>
+            <div class="featured">
+                <h3>Featured Products</h3>
+                <div id="products">
+                    <p>Productivity booster</p>
+                    <p>Gaming beast</p>
+                    <p>Some new products</p>
+                    <p>Prducts new some</p>
+                </div>
+            </div>
+        </main>
+        <script src="./main.js"></script>
+    </body>
 </html>
