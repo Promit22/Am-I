@@ -387,4 +387,11 @@ scroll-behavior: smooth;
 #products p {
 flex-shrink: 0;
 margin: 20px;
+padding: 5px;
+transition: all 0.25s ease-in-out;
+}
+
+#products p:hover {
+color: #ff6700;
+border-top: 2px solid #ff6700;
 }
